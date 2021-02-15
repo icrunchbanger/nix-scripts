@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Copyright (C) 2020 'icrunchbanger' icrunchbanger@gmail.com
+# This software is licensed under the terms of the GNU General Public
+# License version 2, as published by the Free Software Foundation, and
+# may be copied, distributed, and modified under those terms.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+export CM_LAUNCHER=dmenu
+export CM_DIR=/home/$USER/.cache
+export CM_HISTLENGTH=24
+
+case "$1" in
+	show)
+		clipmenu ;;
+	clean)
+		clipdel -d ".*" \
+		&& notify-send "Clipboard Content deleted" -u low \
+		|| notify-send "Errors occurred while Clean Up"	;;
+esac

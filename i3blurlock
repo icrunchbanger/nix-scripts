@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Copyright (C) 2020 'icrunchbanger' icrunchbanger@gmail.com
+# This software is licensed under the terms of the GNU General Public
+# License version 2, as published by the Free Software Foundation, and
+# may be copied, distributed, and modified under those terms.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+maim /tmp/i3_lockscreen.png
+convert /tmp/i3_lockscreen.png -blur 0x5 /tmp/i3_blurscreen.png
+i3lock -n -i /tmp/i3_blurscreen.png
