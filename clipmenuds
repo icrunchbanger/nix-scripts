@@ -14,7 +14,7 @@ export CM_HISTLENGTH=24
 
 case "$1" in
 	show)
-		clipmenu ;;
+		clipmenu -nb '#222222' -sf '#222222' -sb '#ffffff' -nf '#ffffff' ;;
 	clean)
 		clipdel -d ".*" \
 		&& notify-send "Clipboard Content deleted" -u low \
